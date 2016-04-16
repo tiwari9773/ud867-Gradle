@@ -11,7 +11,47 @@ hell = "Now String"
 println "My Type is : ${hell.class} and My value is : $hell"
 */
 
+def noArgs()
+{
+    println "No arg Methods"
+}
+
+def oneArgs(x)
+{
+    println "One arg Methods $x"
+    x
+}
+
+def twoArgs(x, y)
+{
+    println "Two arg Methods $x and $y"
+    x+y
+}
+
+noArgs()
+oneArgs(500)
+oneArgs 500
+twoArgs 300, 200
+twoArgs (300, 200)
+
+/*nested*/
+//twoArgs oneArgs 500, 200
+twoArgs oneArgs (500), 200
+/*
 println "Addition is : ${5+6}"
+
+def doubleIt(n)
+{
+    n+n
+}
+
+def start = 5
+println "Double is : ${doubleIt(start)}"
+
+start = "Test Content"
+println "Double is : ${doubleIt(start)}"    
+*/
+
 /*
 class JavaTesting{
     public static void sayHello()
