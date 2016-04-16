@@ -2,8 +2,8 @@ task groovy << {}
 println "Hello groovy"
 
 /* Gradle is optionally typed lang*/
-def hell = 6.5
-println "I am : $hell"
+//def hell = 6.5
+//println "I am : $hell"
 
 /*
 println "My Type is : ${hell.class} and My value is : $hell"
@@ -11,7 +11,50 @@ hell = "Now String"
 println "My Type is : ${hell.class} and My value is : $hell"
 */
 
-def noArgs()
+def foo = "bar"
+println "$foo + foo = ${foo +"foo"}"
+
+/*
+//List in Groovy
+def myList = ["hell1","Hell2","Hell2"]
+def myList2 = ["hell3","Hell4","Hell5"]
+//def printItem ={item -> println "List Item: $item"}
+//myList.each(printItem)
+
+myList.each{println "Inline Closures $it"}
+myList2.each{println "Inline Closures $it"}
+*/
+/*
+//Complex Functions
+def doubleIt = {x-> x+x}
+
+def applyTwice(func, arg)
+{
+    func(func(arg))
+}
+
+def foo =10
+def fooDoubledTwice = applyTwice(doubleIt,foo)
+
+println "Apply on $foo After $fooDoubledTwice"
+*/
+
+//Closures
+/* hell = "Lokesh Tiwari"
+def myClosures = {
+  println "Test line one"
+  println "Test line Two is $hell"
+}
+
+//myClosures()
+
+def TestPass = myClosures;
+TestPass()
+
+*/
+
+//Methods
+/*def noArgs()
 {
     println "No arg Methods"
 }
@@ -34,9 +77,11 @@ oneArgs 500
 twoArgs 300, 200
 twoArgs (300, 200)
 
-/*nested*/
+//Nested
 //twoArgs oneArgs 500, 200
 twoArgs oneArgs (500), 200
+*/
+
 /*
 println "Addition is : ${5+6}"
 
