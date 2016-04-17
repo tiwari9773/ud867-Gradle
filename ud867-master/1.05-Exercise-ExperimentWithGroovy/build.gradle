@@ -47,21 +47,30 @@ class Utility{
     {
         return Math.sqrt(arg);
     }
-
-
-
 }
 
 
-task closures << {
-    // TODO: Declare a closure that takes two arguments and adds them together
-    // HINT: http://www.groovy-lang.org/closures.html
+task tetu << {
+    println "Hell"
 
-    // TODO: Call your closure with arguments 17 and 25, and print the result
-    // Beware that something like `println addTwo 17, 25` is ambiguous
-}
+    def singlist = ["Prince", "Lokesh"]
+    //def item2 = {item -> println "List Item: $item"}
 
-task lists << {
+
+    //def printItem ={item -> println "List Item: $item"}
+      //capitalCandies.each(printItem)
+     def capitalCandies = singlist.collect{it.toUpperCase()}
+  
+
+      // TODO: Print each capital candy
+    capitalCandies.each{println it}
+
+    //List in Groovy
+//def myList = ["hell1","Hell2","Hell2"]
+//def printItem ={item -> println "List Item: $item"}
+//myList.each(printItem)
+
+    //item.each{println it}
     // TODO: Declare a list containing 5 of your favorite candies
     // HINT: Try searching for "groovy list literal"
 
@@ -69,5 +78,19 @@ task lists << {
     // HINT: http://mrhaki.blogspot.ca/2010/05/groovy-goodness-use-collect-with.html
 
     // TODO: Print each capital candy
+}
+
+task closuresEx << {
+    // TODO: Declare a closure that takes two arguments and adds them together
+    // HINT: http://www.groovy-lang.org/closures.html
+
+      def addTwo = {x,y -> x+y}
+    // TODO: Call your closure with arguments 17 and 25, and print the result
+    // Beware that something like `println addTwo 17, 25` is ambiguous
+    def val = addTwo (17,25)
+
+    println "hello $val"
 
 }
+
+
