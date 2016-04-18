@@ -25,5 +25,6 @@ tetu.description "My description"
 tetu.group "My group"
 
 tetu {
-	println "I am working"
+	println "I am working here"
+
 }
