@@ -40,3 +40,18 @@ task copyWebTxt(type: Copy){
     include '*.txt'
     into 'build/web/help'
 }
+
+
+
+task bundleWeb(type: Zip, dependsOn: copyWeb) {
+    baseName = 'web'
+    destinationDir = file('src')
+    
+    from 'build/web'
+    exclude 'images/**'
+}
+
+task unpackBundle(type: Copy, dependsOn: bundleWeb) {
+    from zipTree('src/web.zip')
+    into 'build/exploded'
+}
