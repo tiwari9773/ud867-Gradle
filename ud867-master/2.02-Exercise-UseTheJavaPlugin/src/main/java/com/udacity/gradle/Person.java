@@ -10,4 +10,9 @@ public class Person {
     public String getName() {
         return name;
     }
+
+   public static void main(String a[])
+{
+System.out.println("Run Jar");
+}
 }

@@ -18,13 +18,3 @@ Hint: Don't forget about the solution file!
 https://docs.gradle.org/current/dsl/org.gradle.api.Task.html#org.gradle.api.Task:description
 
 */
-
-
-task "tetu"
-tetu.description "My description"
-tetu.group "My group"
-
-tetu {
-	println "I am working here"
-
-}

@@ -1,3 +1,18 @@
+apply plugin: "java"
+
+jar{
+	manifest{
+      attributes 'Implementation-Version': '2.0' // 2. Add manifest attribute
+	}
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir 'java' // 3. Add 'java' directory as a source directory
+        }
+    }
+}
 /*
 
 In this series of exercises we'll be building on our existing knowledge of the

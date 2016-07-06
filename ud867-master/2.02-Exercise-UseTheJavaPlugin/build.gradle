@@ -1,3 +1,4 @@
+apply plugin: "java"
 /*
 
 Let's use the Java plugin to create a JAR! We've provided a simple project
@@ -10,3 +11,24 @@ Exercises:
    file.
 
 */
+
+/*
+task execute(type: JavaExec) {
+   
+     main = "-jar"
+     args = [
+            "P:/RnD/ud867/2.02-Exercise-UseTheJavaPlugin/build/libs/2.02-Exercise-UseTheJavaPlugin.jar"
+           ]
+   
+    
+    // We'll talk about this shortly
+    classpath = sourceSets.main.runtimeClasspath
+}
+*/
+
+
+task execute2(type: JavaExec) {
+    main = "com.udacity.gradle.Person"
+    // We'll talk about this shortly
+    classpath = sourceSets.main.runtimeClasspath
+}

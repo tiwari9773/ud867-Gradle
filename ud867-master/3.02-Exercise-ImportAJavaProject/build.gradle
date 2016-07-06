@@ -1,3 +1,6 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
 /*
 
 Let's move our joke telling code from our build script to a Java project, and
@@ -20,3 +23,10 @@ solution file into this one.
 */
 
 //apply from: "solution.gradle"
+
+mainClassName = "com.udacity.gradle.JokeTeller"
+
+task solutionExecute(type: JavaExec) {
+    main = "com.udacity.gradle.JokeTeller"
+    classpath = sourceSets.main.runtimeClasspath
+}
